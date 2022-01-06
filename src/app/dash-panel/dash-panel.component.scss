@@ -1,0 +1,26 @@
+:host {
+	display: flex;
+	align-items: flex-start;
+	justify-content: flex-start;
+
+	border-radius: 0.35em;
+	padding: 1em;
+
+	transition: background-color 150ms ease-in-out;
+	background-color: var(--theme-box-dark);
+	color: var(--theme-foreground);
+
+	&[button] {
+		align-items: center;
+		justify-content: center;
+	}
+}
+
+:host:hover {
+	background-color: var(--theme-box-light);
+}
+
+a {
+	color: inherit;
+	text-decoration: none;
+}

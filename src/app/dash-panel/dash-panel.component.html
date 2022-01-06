@@ -1,0 +1,7 @@
+<div *ngIf="src; else unlinked">
+	<a [href]="src" target="_self">
+		<ng-container *ngTemplateOutlet="unlinked"></ng-container>
+	</a>
+</div>
+
+<ng-template #unlinked><ng-content></ng-content></ng-template>

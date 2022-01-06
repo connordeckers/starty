@@ -1,0 +1,18 @@
+select {
+	background-color: var(--theme-cyan-dark);
+	color: var(--theme-foreground);
+
+	font-size: 0.8em;
+	padding: 0.3em;
+
+	opacity: 0.2;
+	transition: opacity 100ms ease-in-out;
+
+	&:hover {
+		opacity: 0.75;
+	}
+
+	&:not(:last-of-type) {
+		margin-right: 1em;
+	}
+}

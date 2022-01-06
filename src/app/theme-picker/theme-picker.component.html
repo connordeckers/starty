@@ -1,0 +1,11 @@
+<select (change)="updateColorScheme($event)">
+	<option *ngFor="let color of colors" value="{{color}}" [selected]="selectedColor == color">
+		{{ color }}
+	</option>
+</select>
+
+<select (change)="updateTheme($event)">
+	<option *ngFor="let scheme of schemes" value="{{scheme}}" [selected]="selectedScheme == scheme">
+		{{ scheme }}
+	</option>
+</select>
