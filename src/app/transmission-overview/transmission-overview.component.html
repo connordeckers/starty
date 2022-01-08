@@ -1,1 +1,26 @@
-<p>transmission-overview works!</p>
+<main *ngIf="overview; else loading">
+  <a href="https://download.connr.onl/transmission/web" target="_self">
+    <article>
+      <fa-icon [icon]="pendingIcon"></fa-icon>
+      <h3>Queued</h3>
+      <p>{{ overview.pending || 0 }}</p>
+    </article>
+    <article>
+      <fa-icon [icon]="downloadingIcon"></fa-icon>
+      <h3>Active</h3>
+      <p>{{ overview.downloading || 0 }}</p>
+    </article>
+    <article>
+      <fa-icon [icon]="seedingIcon"></fa-icon>
+      <h3>Seeding</h3>
+      <p>{{ overview.seeding || 0 }}</p>
+    </article>
+    <article>
+      <fa-icon [icon]="totalIcon"></fa-icon>
+      <h3>Total</h3>
+      <p>{{ overview.total || 0 }}</p>
+    </article>
+  </a>
+</main>
+
+<ng-template #loading>Loading...</ng-template>

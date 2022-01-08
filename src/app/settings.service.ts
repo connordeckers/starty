@@ -1,8 +1,8 @@
-import {Injectable} from '@angular/core';
-import {Observable, from} from 'rxjs';
+import { Injectable } from '@angular/core';
+import { Observable, from, Observer } from 'rxjs';
 
 @Injectable({
-  providedIn: 'root'
+  providedIn: 'root',
 })
 export class SettingsService {
   constructor() {}
@@ -10,5 +10,9 @@ export class SettingsService {
   private title = 'Starty Dash';
   getTitle(): Observable<string> {
     return from([this.title]);
+  }
+
+  getTransmissionURL(): Observable<string> {
+    return from(['https://download.connr.onl/transmission/rpc']);
   }
 }
